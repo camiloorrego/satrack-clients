@@ -1,0 +1,19 @@
+<div class="view-login" fxLayout="column" fxLayoutAlign="center center">
+  <img src="https://maindb.blob.core.windows.net/ruta-s/logo_satrack_perrito.png" alt="">
+  <div fxLayout="column" fxLayoutAlign="center center">
+
+    <mat-form-field>
+      <input matInput placeholder="Usuario" [formControl]="user" required>
+      <mat-error *ngIf="user.invalid">{{pawwodfa}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input type="password" matInput placeholder="Contraseña" [formControl]="password" required>
+      <mat-error *ngIf="password.invalid">Este campo es requerido</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div>
+    <button mat-flat-button color="primary" (click)="login()" [disabled]="user.invalid || password.invalid">INICIAR SESIÓN</button>
+  </div>
+</div>
