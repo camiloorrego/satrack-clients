@@ -7,7 +7,7 @@ import { AngularMaterialModule } from '../modules/angularmaterial.module';
   declarations: [ClientsComponent],
   imports: [
     CommonModule,
-    AngularMaterialModule,        
+    AngularMaterialModule,
   ]
 })
 export class CoreModule { }
