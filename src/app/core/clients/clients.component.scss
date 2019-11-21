@@ -1,0 +1,29 @@
+.view-clients{
+}
+
+.body-clients,
+.header-clients{
+    width: 90%;
+}
+
+table {
+    width: 100%;
+}
+.client-high{
+    background-color: #f9d0d0;
+    color: red;    
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.client-low{    
+    background-color: #d6f5d6;
+    color: green;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.client-medium{
+    background-color: #fdfdc0;
+    color: #ff4700;
+}

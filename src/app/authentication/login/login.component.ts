@@ -13,7 +13,11 @@ export class LoginComponent implements OnInit {
   user = new FormControl('', [Validators.required]);
   password = new FormControl('', [Validators.required]);
 
-  constructor(public service: LoginService, public router: Router) { }
+  constructor(public service: LoginService, public router: Router) { 
+    if(this.service.hasToken()){
+      this.router.navigate(['clients']);
+    }
+  }
 
   ngOnInit() {
   }
@@ -26,6 +30,7 @@ export class LoginComponent implements OnInit {
 
     this.service.login(body).subscribe((response: any) => {
       console.log('OK');
+      this.service.setToken(this.user.value);
       this.router.navigate(['clients']);
     }, (e: any) => {
       console.log('ERROR');
